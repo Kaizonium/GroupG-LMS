@@ -1,4 +1,5 @@
 # GroupG-LMS
+LMS - Library Management System by Group G
 This is a fully automated library service which has the ability to display all the details of the books available in various sections, the transaction of books and about the book holders.
 So, by managing and storing information electronically, this can provide a simple, efficient and a secure management system.
 
