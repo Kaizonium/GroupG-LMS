@@ -105,19 +105,25 @@ public class deleteu extends javax.swing.JFrame {
             if(apw.getText().equals("123")){
                 
                 if(rs1.next()){
+                    
+                int k = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);    
                 
+                if(k==0){
+                    
                 st.executeUpdate("delete from `user` where user_id = '"+uid.getText()+"' ");
                 
                 JOptionPane.showMessageDialog(null,"Done!");
                 dispose();
                 new log().setVisible(true);
                 
+                }
+                
             }
             else
-                JOptionPane.showMessageDialog(null,"icorrect user name!");
+                JOptionPane.showMessageDialog(null,"incorrect user name!");
             }
             else
-                JOptionPane.showMessageDialog(null,"icorrect Admin Password!");
+                JOptionPane.showMessageDialog(null,"incorrect Admin Password!");
             
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e);

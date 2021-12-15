@@ -107,7 +107,7 @@ public class log extends javax.swing.JFrame {
         jLabel1.setText("Login");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 130, 50));
 
-        jLabel6.setFont(new java.awt.Font("Speedline MF", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Speedline MF", 0, 12)); // NOI18N
         jLabel6.setText("Developed by Group G students of ECS200, Electronic Engineering Class of 2024, Sri Lanka Technological Campus");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 850, -1));
 
@@ -166,7 +166,13 @@ public class log extends javax.swing.JFrame {
     }//GEN-LAST:event_logActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        
+        int k = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(k==0){
         System.exit(0);
+        }
+        
     }//GEN-LAST:event_exitActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

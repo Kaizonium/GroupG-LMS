@@ -1,18 +1,7 @@
 
 package Frames;
 
-import java.sql.Connection;
-import java.sql.Statement;
-import javax.swing.JOptionPane;
-import code.connection;
-import java.sql.ResultSet;
-
 public class statistic extends javax.swing.JFrame {
-
-    /*public String b,m;*/
-    Connection conn = null;
-    Statement st = null;
-    ResultSet rs = null;
     
     public statistic() {
         initComponents();
@@ -110,18 +99,18 @@ public class statistic extends javax.swing.JFrame {
 
     private void bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookActionPerformed
 
-               dispose();
-               new bookinfo().setVisible(true); 
+       dispose();
+       new bookinfo().setVisible(true); 
     }//GEN-LAST:event_bookActionPerformed
 
     private void memberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberActionPerformed
-               dispose();
-               new memberinfo().setVisible(true);
+       dispose();
+       new memberinfo().setVisible(true);
     }//GEN-LAST:event_memberActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        dispose();
-        new history().setVisible(true);
+       dispose();
+       new history().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {

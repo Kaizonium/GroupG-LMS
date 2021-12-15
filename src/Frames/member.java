@@ -74,7 +74,7 @@ public class member extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("New Member");
+        setTitle("Edit Member");
         setMaximumSize(new java.awt.Dimension(700, 500));
         setMinimumSize(new java.awt.Dimension(700, 500));
         setPreferredSize(new java.awt.Dimension(700, 500));
@@ -300,12 +300,17 @@ public class member extends javax.swing.JFrame {
             st = conn.createStatement();
             String a = id.getText();
             
+            int k = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
          
+            if(k==0){
+                
             st.executeUpdate("DELETE FROM `member` WHERE member_id = '"+a+"' ");
             
             JOptionPane.showMessageDialog(null,"Done!");
             dispose();
             new member().setVisible(true);
+            
+            }
     
             }catch(Exception e){
                

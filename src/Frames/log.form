@@ -212,7 +212,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Speedline MF" size="14" style="0"/>
+              <Font name="Speedline MF" size="12" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Developed by Group G students of ECS200, Electronic Engineering Class of 2024, Sri Lanka Technological Campus"/>
           </Properties>

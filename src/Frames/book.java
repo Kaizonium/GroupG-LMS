@@ -348,13 +348,14 @@ public class book extends javax.swing.JFrame {
                 String a = bid.getText();
                 String b = bc.getText();
                 
-               /* ResultSet rs1 = null; */
-               
                 rs = st.executeQuery("SELECT `book_code` FROM `book` WHERE book_id = '"+a+"' and book_code = '"+b+"' ");
                 
                 if(rs.next()){
                 
-               
+                int k = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);    
+                
+                if(k==0){
+                    
                 st.executeUpdate("DELETE FROM `book` WHERE book_id = '"+a+"' and book_code = '"+b+"' ");
                 
                 rs = st.executeQuery("select `book_id` from `book` where book_id = '"+a+"' ");
@@ -371,11 +372,13 @@ public class book extends javax.swing.JFrame {
                 new book().setVisible(true);
                 
                 }
+                
+                }
                 else
                    JOptionPane.showMessageDialog(null,"Book CODE is not exsits!");
                 
             }catch(Exception e){
-                JOptionPane.showMessageDialog(null,e);
+                JOptionPane.showMessageDialog(null,"Wrong input!");
             }finally{
         
         if(conn!=null && st!=null){
